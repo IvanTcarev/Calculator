@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main(int argc, char** argv)
+{
+	if (argc != 4)
+	{
+		cout << "Error" << endl;
+		return 1;
+	}
+	double a, b;
+	a = atof(argv[1]);
+	b = atof(argv[3]);
+	if (argv[2][0] == '*')
+		cout << a * b << endl;
+	else if ('/' == argv[2][0])
+		cout << a / b << endl;
+	else if ('+' == argv[2][0])
+		cout << a + b << endl;
+	else if ('-' == argv[2][0])
+		cout << a - b << endl;
+	return 0;
+}
